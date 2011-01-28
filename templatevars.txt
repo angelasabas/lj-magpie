@@ -1,0 +1,31 @@
+
+Livejournal Magpie - Template Variables
+=======================================
+
+This document contains the different variables you can use in the LJ Magpie template.
+
+<?= $href ?>  - the link to the entry
+<?= $title ?> - the title of the entry (if present)
+<?= $entry ?> - the actual entry text
+<?= $reply ?> - reply link
+
+<?= $dayshort ?> - Short day of the week: Mon to Sun
+<?= $daylong ?>  - Long day of the week: Monday to Sunday
+<?= $monshort ?> - Short month: Jan to Dec
+<?= $monlong ?>  - Long month: January to December
+<?= $yy ?>       - Two-digit year: 99, 00, 01, 02,...
+<?= $yyyy ?>     - Four-digit year: 1999, 2000, 2001, 2002,...
+<?= $m ?>        - Month digit: 1 to 12
+<?= $mm ?>       - Month digit with leading zeroes: 01 to 12
+<?= $d ?>        - Day of the month: 1 to 31
+<?= $dd ?>       - Day of the month with leading zeroes: 01 to 31
+<?= $dth ?>      - Day of the month with suffix: 1st to 31st
+<?= $ampm ?>     - 'am' or 'pm'
+<?= $AMPM ?>     - 'AM' or 'PM'
+<?= $ap ?>       - 'a' or 'p'
+<?= $AP ?>       - 'A' or 'P'
+<?= $min ?>      - Minutes of the hour
+<?= $_12h ?>     - 12-hour format: 1 to 12
+<?= $_12hh ?>    - 12-hour format with leading zeroes: 01 to 12
+<?= $_24h ?>     - 24-hour format: 1 to 24
+<?= $_24hh ?>    - 24-hour format with leading zeroes: 01 to 24

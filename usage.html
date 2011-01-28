@@ -1,0 +1,74 @@
+<div class="divTitle">
+Embedding Livejournal Entries
+</div>
+
+<p>
+When I started using livejournal, I wanted to integrate it with the rest of my site but didn't know how. I didn't want to use frames because I never use frames (hehe). I tried making an RSS parser, but it was too much. And then I discovered <a href="http://magpierss.sourceforge.net/">Magpie RSS</a>.
+</p>
+
+<p>
+Magpie RSS is a "simple RSS integration tool". It takes an RSS feed and allows end-users to show the contents in another file, using PHP. The result is that you can have the information from the RSS feed show up on your site. I used this wonderful tool to show my <a href="http://livejournal.com/~angelamaria">latest livejournal entries</a> in a <a href="livejournal.php">blog-like format</a> on my domain. Instant blog! Ditto with the <a href="photolog.php">photolog/screenlog</a>-- it is from my <a href="http://livejournal.com/~angelamaria/friends/photolog">eveningsky livejournal</a>.
+</p>
+
+<p>
+So this is a simple tutorial on how to use Magpie RSS to include livejournal entries on a page on your domain.
+</p>
+
+<div class="divSubTitle">
+Requirements
+</div>
+
+<ol>
+
+<li> Magpie RSS, found at <a href="http://magpierss.sourceforge.net/">http://magpierss.sourceforge.net</a> </li>
+
+<li> My Livejournal Magpie script, found at <a href="downloads.php?select=ljmagpie">downloads.php?select=ljmagpie</a> </li>
+
+<li> PHP (whatever requirements Magpie RSS has) </li>
+
+<li> A livejournal account </li>
+
+</ol>
+
+<div class="divSubTitle">
+Instructions
+</div>
+
+<ol>
+
+<li> If you haven't done so already, download Magpie RSS and Livejournal Magpie from the links provided in the requirements section. </li>
+
+<li> Unzip the Magpie RSS zip file to somewhere on your computer first, and then upload the following files to the same directory you want your "blog" page to be shown:<br /><br />
+
+<ul>
+
+<li> rss_cache.inc </li>
+<li> rss_fetch.inc </li>
+<li> rss_parse.inc </li>
+<li> rss_utils.inc </li>
+<li> extlib/Snoopy.class.inc (keep this in the extlib directory!) </li>
+
+</ul> </li>
+
+<li> Unzip the LJ Magpie zip file to somewhere on your computer, and open up ljmagpie.php </li>
+
+<li> Find the lines shown in red in the image below, and change the value of "username" to your livejournal account username.<br /><br />
+<img src="ljmagpie01.gif" width="400" height="282" border="0" alt=" $url field" /> </li>
+
+<li> Scroll down the file and find the section that looks like the section shown on the image below. The red text is the template for your entries. You can probably leave this part alone, but if you want to customize how the entries look like, you'll want to change this. Please refer to the templatevars.txt file for the full list of variables.<br /><br />
+<img src="ljmagpie02.gif" width="400" height="282" border="0" alt=" template section" /> </li>
+</li>
+
+<li> Now look at the files that the LJ Magpie script contains. There is a blog.php file there-- you can rename this file to any filename you want your "blog" to have, <i>as long as it ends in <u>.php</u></i>. Now open this file. The only really important part of this file is the lines in red below:<br /><br />
+
+<img src="ljmagpie03.gif" width="400" height="131" border="0" alt=" include ljmagpie" /><br /><br />
+
+This page you can edit to your heart's content-- insert your layout, etc. The three lines highlighted above is where your livejournal entries will go, so build your layout around those three lines. </li>
+
+<li> When you're done or you want to see what the page looks like, upload blog.php (or whatever you've renamed it to) and ljmagpie.php to the directory on your server (where you earlier uploaded the Magpie RSS files). Load up blog.php on your browser and check out the results. :) And you're done! </li>
+
+</ol>
+
+<p>
+If you have any questions, please feel free to contact me and ask. :)
+</p>
